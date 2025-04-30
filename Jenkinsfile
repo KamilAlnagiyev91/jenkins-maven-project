@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+		sh 'mvn --version'
                 sh 'mvn -f hello-app/pom.xml test'
             }
             post {
